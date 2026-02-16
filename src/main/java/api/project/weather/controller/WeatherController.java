@@ -23,7 +23,6 @@ public class WeatherController {
         return ResponseEntity.ok("API Key saqlandi");
     }
 
-    // Return type o'zgardi: ResponseEntity<WeatherResponse>
     @GetMapping("/weather")
     public ResponseEntity<WeatherResponse> getWeather(@RequestParam String city) {
         return ResponseEntity.ok(weatherService.getWeather(city));
